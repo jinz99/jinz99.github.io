@@ -464,9 +464,10 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>安装完 Git 之后，要做的第一件事就是设置自己的用户名和邮件地址。<br>git config –global user.name “xxx”<br>git config –global user.email “<a href="mailto:&#x78;&#x78;&#120;&#x40;&#113;&#113;&#x2e;&#99;&#111;&#x6d;">&#x78;&#x78;&#120;&#x40;&#113;&#113;&#x2e;&#99;&#111;&#x6d;</a>“</p>
-<p>1.在项目根目录右键打开 Git Base Here</p>
-<ol start="2">
+                <p>安装完 Git 之后，要做的第一件事就是设置自己的用户名和邮件地址。<br>git config –global user.name “xxx”<br>git config –global user.email “<a href="mailto:&#120;&#120;&#120;&#x40;&#x71;&#113;&#x2e;&#x63;&#x6f;&#109;">&#120;&#120;&#120;&#x40;&#x71;&#113;&#x2e;&#x63;&#x6f;&#109;</a>“</p>
+<ol>
+<li><p>在项目根目录右键打开 Git Base Here</p>
+</li>
 <li><p>git init 初始化仓库 —-这是项目根目录下 会出现一个.git 文件，这就是本地仓库</p>
 </li>
 <li><p>git status 检查该目录下文件的状态 加 -s 简洁查看状态</p>
@@ -475,19 +476,18 @@
 </li>
 <li><p>git commit -m ‘提交信息’ 将项目进行本地提交 (也就是本地仓库) 执行完 commit 后才有主分支 master</p>
 </li>
-</ol>
-<p>6 git log 可以查看所有提交的版本</p>
-<ol start="7">
-<li><p>git remote add origin 远程创库地址； 将本地仓库和远程仓储关联，并使用 origin 做为远程仓储的别名<br> 第一次推送用</p>
+<li><p>git log 可以查看所有提交的版本</p>
+</li>
+<li><p>git remote add origin 远程创库地址； 将本地仓库和远程仓储关联，并使用 origin 做为远程仓储的别名<br>第一次推送用</p>
 </li>
 <li><p>git push -u origin “分支名称” 将本地当前分支上和分支上的代码推送到到远程仓库<br>git push -u origin master 将本地的 master 分支推送到远程仓库 git push 来推送代码<br>git push -u origin login 将本地的 login 分支推送到远程仓库 git push 来推送代码<br>git remote show 远程仓库名称 查看远程仓库所有的分支</p>
 </li>
 <li><p>用命令行的方式把修改后的代码上传到码云 1. git add . 将所有文件添加到暂存区 2. git commit -m “提交信息” 将暂存区所有文件进行本地提交 3. 第二次推送用 git push 将本地 git 仓库中的文件推送到远程仓库</p>
 </li>
 <li><p>git branch 查看分支<br>git branch 分支名称 创建分支<br>git branch -d 分支名称 删除分支<br>git checkout 分支名称 切换分支<br> git checkout -b 分支名称 创建并切换分支<br>合并分支<br>git checkout master 切换到主分支 master<br>git merge login 先切换到主分支在合并 login 分支<br>git branch -d login 先切换到主分支在删除本地 login 分支 如果没有合并就删除会报错，加-D 可以强制删除 login 分支<br>git push origin –delete reg 删除远程仓库中指定的分支<br>拉取远程分支<br>git fetch origin 远程分支名 将远程分支拉到本地<br>git checkout -b 本地分支 origin&#x2F;远程分支 创建本地分支并切换到该分支，同时将本地分支和远程分支进行关联。<br>git pull origin 远程分支名(login) 将远程分支代码拉取到本地当前分支上(login)<br>git pull origin master 如果远程分支是与当前分支合并，则冒号后面的部分可以省略。<br>git pull origin master:brantest 将远程主机 origin 的 master 分支拉取过来，与本地的 brantest 分支合并。</p>
+<p>常用<br>git clone “远程仓库地址” &#x2F;&#x2F;克隆项目<br>git init &#x2F;&#x2F;初始化代码仓库<br>git add learngit.txt &#x2F;&#x2F;把所有要提交的文件修改放到暂存区 git add .将所有文件提交到暂存区<br>git commit -m ‘add a file’ &#x2F;&#x2F;把暂存区的所有内容提交到当前分支<br>git status &#x2F;&#x2F;查看工作区状态<br>git diff &#x2F;&#x2F;查看文件修改内容<br>git log &#x2F;&#x2F;查看提交历史<br>git log –pretty&#x3D;oneline &#x2F;&#x2F;单行显示<br>git reset –hard <CommitId>　　　　　　　　 &#x2F;&#x2F;回退到上一个版本，其中（CommitId 是版本的 id）</p>
 </li>
 </ol>
-<p>常用<br>git clone “远程仓库地址” &#x2F;&#x2F;克隆项目<br>git init &#x2F;&#x2F;初始化代码仓库<br>git add learngit.txt &#x2F;&#x2F;把所有要提交的文件修改放到暂存区 git add .将所有文件提交到暂存区<br>git commit -m ‘add a file’ &#x2F;&#x2F;把暂存区的所有内容提交到当前分支<br>git status &#x2F;&#x2F;查看工作区状态<br>git diff &#x2F;&#x2F;查看文件修改内容<br>git log &#x2F;&#x2F;查看提交历史<br>git log –pretty&#x3D;oneline &#x2F;&#x2F;单行显示<br>git reset –hard <CommitId>　　　　　　　　 &#x2F;&#x2F;回退到上一个版本，其中（CommitId 是版本的 id）</p>
 
                 
             </div>
