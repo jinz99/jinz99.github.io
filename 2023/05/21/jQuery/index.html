@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="移动端, JinBlog">
+    <meta name="keywords" content="jQuery, JinBlog">
     <meta name="description" content="技术分享, web前端">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>移动端 | JinBlog</title>
+    <title>jQuery | JinBlog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -310,12 +310,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/2.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/18.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">移动端</h1>
+                    <h1 class="description center-align post-title">jQuery</h1>
                 </div>
             </div>
         </div>
@@ -443,7 +443,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2023-04-21
+                    2023-05-21
                 </div>
                 
 
@@ -464,20 +464,577 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="单位换算"><a href="#单位换算" class="headerlink" title="单位换算"></a>单位换算</h1><h2 id="微信"><a href="#微信" class="headerlink" title="微信"></a>微信</h2><p>375px &#x3D; 750rpx -&gt; 1px &#x3D; 2rpx</p>
-<p>360px &#x3D; 750rpx -&gt; 1px (360&#x2F;360) &#x3D;2.08rpx (750&#x2F;360)</p>
-<h2 id="移动端"><a href="#移动端" class="headerlink" title="移动端"></a>移动端</h2><p>750px &#x3D; 100vw   -&gt;   1px (750&#x2F;750) &#x3D; 0.1333vw (100&#x2F;750)    -&gt;10px: calc(0.1333vw * 10) &#x3D;1.333vw</p>
-<p>360dp &#x3D; 100vw -&gt; 1dp (360&#x2F;360) &#x3D; 0.2778vw (100&#x2F;360)     -&gt;  10dp: calc(0.2778vw  * 10) &#x3D;2.778vw</p>
-<h2 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h2><p>1.以固定宽度 750px 为例进行计算：<br>一、vw、px、rem 换算（1rem &#x3D; 100px）：（谷歌，火狐，IE、uc、qq 浏览器适用）</p>
-<p>已知：750px &#x3D; 100vw<br>计算：1px &#x3D; (100vw &#x2F; 750px) &#x3D; 0.1333vw</p>
-<p>定义：1rem &#x3D; 100px （也就是 1px &#x3D; 0.01rem）<br>那么：1rem &#x3D; 0.1333vw * 100 &#x3D; 13.33vw （设置：根标签 html 字体为 100px：font-size &#x3D; 13.33vw）</p>
-<p>换算：1rem &#x3D; 100px &#x3D; 13.33vw<br>1px &#x3D; 0.01rem &#x3D; 0.1333vw</p>
-<p>2.计图为（750px）</p>
-<p>现在要创建一个 48px * 35px 大小的元素</p>
-<p>因为 750px( 设计图) &#x3D;100vw </p>
-<p>得到 1px &#x3D; 100&#x2F;750 &#x3D; 0.1333333333333333vw</p>
-<p>所以 48px(设计图上) &#x3D; 6.4vw -&gt;  calc(0.1333333333333333vw *48)</p>
-<p>35px（设计图）&#x3D; 4.667vw     -&gt;   calc(0.1333333333333333vw *35)</p>
+                <p>第一天</p>
+<p>一   . 什么是jQuery</p>
+<p>jQuery其实就是一个js文件（js库），里面封装了一大堆的方法方便我们的开发,其实就是一个加强版的common.js，因此我们学习jQuery，其实就是学习jQuery这个js文件中封装的一大堆方法。</p>
+<p>\1. 查找元素的方法多种多样，非常灵活</p>
+<p>\2. 拥有隐式迭代特性，因此不再需要手写for循环了。</p>
+<p>\3. 完全没有兼容性问题。    </p>
+<p>\4. 实现动画非常简单，而且功能更加的强大。</p>
+<p>\5. 代码简单、粗暴。</p>
+<p>\6. jQuery中事件不会覆盖，js中事件会覆盖</p>
+<p>二.jQuery版本说明</p>
+<p>(1)1.几版本：能够兼容IE678浏览器 —-常用</p>
+<p>2.几版本：不兼容IE678浏览器</p>
+<p>1.几和2.几版本jquery都不再更新版本了，现在只更新3.x版本。</p>
+<p>3.x版本：不兼容IE678，更加的精简（在国内不流行，因为国内使用jQuery的主要目的就是兼容IE678）</p>
+<p>​      (2) 压缩版本和未压缩版本</p>
+<p>jquery-1.12.4.min.js:压缩版本，适用于生产环境，因为文件比较小，去除了注释、换行、空格等东西，但是基本没有颗阅读性。都变成了一行</p>
+<p>jquery-1.12.4.js:未压缩版本，适用于学习与开发环境，源码清晰,易阅读。</p>
+<p>三.入口函数</p>
+<p>​      js的入口函数执行要比jQuery的入口函数执行得慢一些。     </p>
+<p>jq的入口函数会等待页面的加载完成才执行，但是不会等待资源(图片)的加载。</p>
+<p>js的入口函数会等待页面加载完成，并且等待资源(图片)加载完成才开始执行</p>
+<p>例：window.onload &#x3D; function() {</p>
+<p>​                       console.log(“js中的入口函数”);</p>
+<p>​                  }</p>
+<p>​                  $(document).ready(function() {</p>
+<p>​                       console.log(“jQuery入口函数的第一种方式”);</p>
+<p>​                  });</p>
+<p>​                  $(function() {</p>
+<p>​                       console.log(“jQuery入口函数的第二种方式”);</p>
+<p>})</p>
+<p>四. jQuery对象与DOM(js)对象的区别（重点）</p>
+<p>​      (1) 什么是DOM对象(js对象)</p>
+<p>使用js的方式获取到的元素就是js对象（DOM对象）</p>
+<p>​      (2) 什么是jq对象</p>
+<p>​            使用jq的方式获取到的元素就是jq对象</p>
+<p>(3) jq对象与js对象的联系</p>
+<p>jq对象就是包含了js对象的一个集合，是一个伪数组，里面存放了一大堆的js对象    </p>
+<p>(4)  DOM对象只能用DOM对象的方法,不能使用jQuery的方法</p>
+<p>jQuery对象只能用jQuery对象的方法,不能使用DOM的方法</p>
+<p>(5)  jQuery对象与DOM对象之间的转换</p>
+<p>   1.DOM对象转jquery对象</p>
+<p>var cloth&#x3D;document.getElementById(“cloth”);</p>
+<p>$(cloth).text(“呵呵”);  转成jQuery对象,就可以用jQuery的方法</p>
+<p>​         \2. jQuery对象转DOM对象</p>
+<p>​            Var $li&#x3D;$(“li”);   jq对象是包含DOM对象的一个集合,是一个伪数组</p>
+<p>​            $li[0];   转成DOM对象,就可以用DOM对象的方法了</p>
+<p>​            $li.get(0)  转成DOM对象,</p>
+<p>五. $的实质</p>
+<p>​      只要是对象里面就有__proto__原型对象, </p>
+<p>只要是函数里面就有prototype原型对象</p>
+<p> **$**<strong>符号就是一个函数也是一个对象</strong></p>
+<p>$()后面加小括号就是调用这个函数，参数不同，功能就不同，</p>
+<p>​        $就等于jQuery，$只不过是缩写 console.log($&#x3D;&#x3D;&#x3D;JQuery)&#x2F;&#x2F;true</p>
+<p>​                  4种用法</p>
+<p>​                  &#x2F;&#x2F;1.参数是一个function 就是一个入口函数</p>
+<p>​                  $(function (){                    </p>
+<p>​                  })</p>
+<p>​                  &#x2F;&#x2F;2. $(dom对象)  把dom对象转换成jquery对象</p>
+<p>​                  $(document).ready(function (){  &#x2F;&#x2F;document转成jQuery对象</p>
+<p>​                  })</p>
+<p>​                  &#x2F;&#x2F;3.参数是一个字符串，用来找对象</p>
+<p>​                  &#x2F;&#x2F;$(“div”)   $(“#btn”)    $(“.cls”);</p>
+<p>4.创建一个jq对象里面是li元素</p>
+<p>$(‘<li></li>‘);</p>
+<p>六．基本选择器</p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>用法</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>ID选择器</td>
+<td>$(“#id”);只获取一个</td>
+<td>获取指定ID的元素</td>
+</tr>
+<tr>
+<td>类选择器</td>
+<td>$(“.class”);</td>
+<td>获取同一类class的所有元素</td>
+</tr>
+<tr>
+<td>标签选择器</td>
+<td>$(“div”);</td>
+<td>获取同一类标签的所有元素</td>
+</tr>
+<tr>
+<td>并集选择器</td>
+<td>$(“div,p,li”);</td>
+<td>使用逗号分隔，只要符合条件之一就可。获取所有的div、p、li元素</td>
+</tr>
+<tr>
+<td>交集选择器（标签指定式选择器）</td>
+<td>$(“div.redClass”);   $(“.green.yellow”);</td>
+<td>选择器之间没有空格，class为redClass的div元素。选择有类选择器是green和yellow的元素</td>
+</tr>
+</tbody></table>
+<p>七．关系选择器</p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>用法</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>子代选择器</td>
+<td>$(“ul&gt;li”);</td>
+<td>使用&gt;号，获取儿子层级的元素，注意，并不会获取孙子层级的元素</td>
+</tr>
+<tr>
+<td>后代选择器</td>
+<td>$(“ul   li”);</td>
+<td>使用空格，代表后代选择器，获取ul下的所有li元素，包括孙子等</td>
+</tr>
+</tbody></table>
+<p>跟CSS的选择器一模一样。  这些选择器返回的都是伪数组</p>
+<p>八．鼠标进入和出去</p>
+<p>mouseover：鼠标进入事件   鼠标进入时执行一次，经过子元素时又执行一次</p>
+<p>mouseout:鼠标离开事件    鼠标离开时执行一次，离开子元素时又执行一次</p>
+<p>mouseenter:鼠标进入事件   只执行一次      效率更高</p>
+<p>mouseleave：鼠标离开事件     只执行一次</p>
+<p>九.过滤选择器</p>
+<p>​    这类选择器都带冒号：</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>用法</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>:eq（index）</td>
+<td>$(“li:eq(2)”).css(“color”,   ”red”);</td>
+<td>获取到所有的li元素中，选择索引号为2的元素(是一个Jq对象)，索引号index从0开始。</td>
+</tr>
+<tr>
+<td>:odd</td>
+<td>$(“li:odd”).css(“color”,   ”red”);</td>
+<td>获取到所有的li元素中，选择索引号为奇数的元素</td>
+</tr>
+<tr>
+<td>:even</td>
+<td>$(“li:even”).css(“color”,   ”red”);</td>
+<td>获取到所有的li元素中，选择索引号为偶数的元素</td>
+</tr>
+<tr>
+<td>:chechked</td>
+<td>$(“input:checked”).length</td>
+<td>找到所有的input中被选中的input</td>
+</tr>
+<tr>
+<td>:first   :last</td>
+<td>$(“li:first”)   $(“li:last”)</td>
+<td>获取第一个li   获取最后一个li</td>
+</tr>
+</tbody></table>
+<p>【案例：隔行变色】</p>
+<p>十．筛选选择器(方法)</p>
+<p>筛选选择器的功能与过滤选择器有点类似，但是用法不一样，筛选选择器主要是方法。 通过对象调用来使用</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>用法</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>children(selector)</td>
+<td>$(“ul”).children(“li”)   $(“ul”).children()；获取所有的子元素</td>
+<td>相当于$(“ul&gt;li”)，子类选择器</td>
+</tr>
+<tr>
+<td>find(selector)括号中参数要写，不写就</td>
+<td>$(“ul”).find(“li”);   返回空伪数组</td>
+<td>相当于$(“ul li”),后代选择器</td>
+</tr>
+<tr>
+<td>siblings(selector)</td>
+<td>$(“#first”).siblings(“li”);   $(“#first”).siblings();获取所有的兄弟元素,不包括自己</td>
+<td>只获取兄弟元素中的是li元素</td>
+</tr>
+<tr>
+<td>parent()</td>
+<td>$(“#first”).parent();</td>
+<td>查找父亲</td>
+</tr>
+<tr>
+<td>eq(index)</td>
+<td>$(“li”).eq(2);</td>
+<td>相当于$(“li:eq(2)”),index从0开始</td>
+</tr>
+<tr>
+<td>next()</td>
+<td>$(“li”).next()</td>
+<td>找下一个兄弟</td>
+</tr>
+<tr>
+<td>nextAll()</td>
+<td>$(“li”).nextAll()</td>
+<td>找下面所有的兄弟</td>
+</tr>
+<tr>
+<td>prev()</td>
+<td>$(“li”).prev()</td>
+<td>找上一个兄弟</td>
+</tr>
+<tr>
+<td>prevAll()</td>
+<td>$(“li”).prevAll()</td>
+<td>找上面所有的兄弟</td>
+</tr>
+</tbody></table>
+<p>这些选择器返回的的是一个jq对象,而jq对象是一个伪数组，里面存放的是js对象</p>
+<p>十一 index()方法 </p>
+<p>​      jQuery里面基本上都是方法，很少有属性</p>
+<p>Jq对象.index(); 返回当前元素在所有兄弟元素里面的索引</p>
+<p>第二天</p>
+<p>一．css()方法操作        三种用法</p>
+<p>(1) 设置单个样式</p>
+<p>​      Jq对象.css(“样式名”,”样式值”)；</p>
+<p>​      (2) 设置多个样式   </p>
+<p>​            Jq对象.css({</p>
+<p>​                       backgroundColor:”yellowgreen”,</p>
+<p>​                       fontSize:”26px”,</p>
+<p>​                       color:”red”</p>
+<p>​                  });</p>
+<p>(3) 获取样式的值   一次只能获取一个</p>
+<p>​       Jq对象.css(“样式名”)；</p>
+<p>​         ag：$(“li”).eq(0).css(“fontSize”,”20px”);</p>
+<p>​                  $(“li”).eq(1).css(“fontSize”,”25px”);</p>
+<p>​                  $(“li”).eq(2).css(“fontSize”,”30px”);</p>
+<p>​                  $(“li”).eq(3).css(“fontSize”,”35px”);</p>
+<p>​                  console.log($(“li”).eq(3).css(“fontSize”));&#x2F;&#x2F;35px</p>
+<p>​              都设置的不同的样式值时,只会获取第一个元素对应的值</p>
+<p>​            console.log($(“li”).css(“fontSize”));&#x2F;&#x2F;20px</p>
+<p>二．隐式迭代：</p>
+<p>​      Jq对象会自动遍历</p>
+<p>设置操作的时候：会给jq内部的所有js对象都设置上相同的值。   设置的时候会遍历</p>
+<p>   获取操作的时候：只会返回第一个元素对应的值。获取的时候不会遍历</p>
+<p>三 class操作</p>
+<p>(1)  添加类样式  在原来类的基础上再添加类</p>
+<p>Jq对象.addClass(“类名”);</p>
+<p>(2) 移除类样式  在原来类的基础上再删除类</p>
+<p>​      Jd对象.removeClass(“类名”);</p>
+<p>​      (3) 判断是否有这个类样式</p>
+<p>​            Jq对象.hasClass(“类名”);   返回boolean值</p>
+<p>​      (4) 切换类样式: 判断这个类有没有这个类名,有就移除,没有就添加</p>
+<p>​            Jq对象.toggleClass(“类名”);</p>
+<p>四.attr()属性操作     和css()方法一样</p>
+<p>​      (1)设置单个属性</p>
+<p>Jq对象.attr(“属性名”,”属性值”)；</p>
+<p>​      (2) 设置多个属性   </p>
+<p>​            Jq对象. attr ({</p>
+<p>​                       title:”哈哈”,</p>
+<p>​                       alt:”haha”,</p>
+<p>​                       style:”width:300px”,</p>
+<p>​                       index:1      &#x2F;&#x2F;自定义属性,最好加一个前缀 data-               </p>
+<p>});</p>
+<p>(3) 获取属性的值</p>
+<p>​      Jq对象.attr(“属性名”);</p>
+<p>​            例：<img src="../img/01.jpg"  title="好看不" alt="没刷出来1"/></p>
+<p>            <img src="../img/01.jpg"  title="好看不" alt="没刷出来2"/></p>
+<p>​                  都设置的不同的属性值时,只会获取第一个元素对应的值</p>
+<p>​                  console.log($(“img”).attr(“alt”));&#x2F;&#x2F;没刷出来1</p>
+<p>​                  console.log($(“img”).eq(1).attr(“alt”));&#x2F;&#x2F;没刷出来2</p>
+<p> (4)删除属性</p>
+<p>​            Jq对象.removeAttr(“属性名”);  removeProp(“属性名”);</p>
+<p>(5) 对于布尔类型值的属性(checked, selected, 或 disabled)，不要用attr方法，应该用prop()方法去设置  ,prop用法跟attr方法一样使用</p>
+<p>(6)  attr()  获取(设置)的是元素(标签里)界面上的属性，当属性没有被设置时候,用attr()方法获取时将返回undefined。</p>
+<p>prop()  获取(设置)的是 元素对应的DOM对象里的属性。</p>
+<p>例子：<input type="checkbox" id="che"></p>
+<p>$(‘#che’).attr(‘checked’); &#x2F;&#x2F;undefined</p>
+<p>$(‘#che’).prop(‘checked’); &#x2F;&#x2F;false</p>
+<p>&#x2F;&#x2F;打印对象的属性和方法, 里面有个checked&#x3D;false</p>
+<p>console.dir($(‘#che’).get(0)) </p>
+<p>五．show()和hide()方法,  一般只用来显示和隐藏. 因为动画不好看</p>
+<p>​      (1)show(); </p>
+<p>​            1.不传参数,就是让它显示</p>
+<p>​                  $(“div”).show();</p>
+<p>​            2.show[speed]传一个数字或固定字符串    是动画显示持续的时间</p>
+<p>​                  fast:200ms   normal:400ms   slow:600ms</p>
+<p>​                  $(“div”).show(1000);</p>
+<p>​            3.show([speed], [callback])传一个数字和一个回调函数</p>
+<p>​                             $(“div”).show(600, function() {</p>
+<p>​                                   console.log(“11”); &#x2F;&#x2F;动画显示完后,再调用这个函数</p>
+<p>​                             })</p>
+<p>(2)  hide()</p>
+<p>1.不传参数,就是让它隐藏</p>
+<p>​                  $(“div”).hide();</p>
+<p>​            \2. hide [speed]传一个数字或固定字符串    是动画隐藏持续的时间</p>
+<p>​                  fast:200ms   normal:400ms   slow:600ms</p>
+<p>​                  $(“div”). hide (1000);</p>
+<p>​            \3. hide ([speed], [callback])传一个数字和一个回调函数</p>
+<p>​                             $(“div”). hide (600, function() {</p>
+<p>​                                   console.log(“11”); &#x2F;&#x2F;动画隐藏完后,再调用这个函数</p>
+<p>​                             })</p>
+<p>​      （3）toggle()  点一下显示，再点一下隐藏</p>
+<p>六．滑入滑出动画</p>
+<p>​      (1)slideDown()和slideUp();</p>
+<p>​            1.不传参数默认是normal</p>
+<p>​            2.传一个数字参数，显示动画或隐藏动画持续的时间</p>
+<p>​            3.传一个数字参数,和一个回调函数</p>
+<p>(2)slideToggle() 切换：点一下滑入，再点一下滑出</p>
+<p>七．淡入淡出动画       案例：京东轮播图</p>
+<p>​      (1)fadeIn()和fadeOut ();</p>
+<p>​            1.不传参数默认是normal</p>
+<p>​            2.传一个数字参数，z显示动画或隐藏动画持续的时间</p>
+<p>​            3.传一个数字参数,和一个回调函数</p>
+<p>​      (2)fadeToggle() 切换：点一下淡入，再点一下淡出</p>
+<p>八．自定义动画</p>
+<p>​      第一个参数：对象，传需要动画的样式</p>
+<p>​      第二个参数：speed 动画的执行时间    默认400ms</p>
+<p>​      第三个参数：动画的执行效果(运动曲线)</p>
+<p>​      第四个参数：回调函数</p>
+<p>​      Jq对象.animate(对象,花费时间,”运动曲线”,回调函数);</p>
+<p>​      例: $(“div”).eq(2).animate({left: 800}, 8000,”linear”,function (){</p>
+<p>​                             console.log(“我是自定义动画”);</p>
+<p>​                       });</p>
+<p>九．动画队列</p>
+<p>​      动画队列：把这些动画存储到一个队列里面,从头到尾一个一个的执行</p>
+<p>Ag:$(“div”).animate({left:800}).animate({top:400}).animate({width:400,height:400},2000).animate({width:100,height:100}).animate({top:0}).animate({left:0});</p>
+<p>十．stop() 动画停止</p>
+<p>​      Jq对象.stop()  停止当前正在执行的动画</p>
+<p>​      参数1:  是否清除动画队列           </p>
+<p>​      参数2: 是否跳转到当前动画的最终效果</p>
+<p>​      Jq对象.stop(布尔值,布尔值);</p>
+<p>十一.jQuery创建节点和添加节点</p>
+<p>​      创建           </p>
+<p>​      $(‘<li></li>‘); 创建一个jq对象里面是li元素</p>
+<p>​      添加</p>
+<p>​      Var $a&#x3D;$(‘<a href="#">百度</a>‘); 创建</p>
+<p>$(“#box”).append($a);</p>
+<p>​      $(“#box”).append($(“p”));&#x2F;&#x2F;在#box中的最后面添加jq对象中所有对象</p>
+<p>​      $(“p”).appendTo(“#box”);把jq对象中的所有对象添加到#box中的最后面</p>
+<p>​      $(“p”).appendTo($(“#box”));</p>
+<p>​      $(“#box”).prepend($(“p”));&#x2F;&#x2F;在#box中的最前面添加jq对象中所有对象</p>
+<p>$(“p”).prependTo($(“#box”))把jq对象中的所有对象添加到#box中的最前面</p>
+<p>​      $(“#box”).before($(“p”));&#x2F;&#x2F;在#box的前面添加jq对象中的所有对象</p>
+<p>​      $(“#box”).after($(“p”));&#x2F;&#x2F;在#box的后面添加jq对象</p>
+<p>十二.清空节点和删除节点</p>
+<p>1.清空</p>
+<p>​      Jq对象.html(“”);清空所有子节点和内容,不会清除元素绑定的事件</p>
+<p>Jq对象.empty();清空所有子节点和内容，并且会清除绑定的事件</p>
+<p>2.删除</p>
+<p>Jq对象.remove();删除自己，也会删除自己所有的内容</p>
+<p>3.克隆</p>
+<p>   Jq对象.clone(boolean); </p>
+<p>​      false:不传参数或者传false,都会克隆标签和内容,但不会克隆绑定的事件</p>
+<p>true:克隆标签和内容,也会克隆绑定的事件</p>
+<p>第三天</p>
+<p>一.val() 方法</p>
+<p>​      Jq对象.val(); 获取value的值</p>
+<p>​      Jq对象val(“字符串”)； 设置value的值</p>
+<p>二. html()方法和text()</p>
+<p>​      html():  相当于innerHTML   </p>
+<p>​      jq对象.html()   获取标签和文本内容</p>
+<p>​      jq对象.html(“<p>我是p</p>“)   设置标签和文本内容</p>
+<p>text():  相当于innerText</p>
+<p>​      jq对象. text ()   获取文本内容</p>
+<p>​      jq对象.text(“我是p”)         只能设置文本内容</p>
+<p>三 width()和height()方法</p>
+<p>​      Jq对象.css(“width”);   css方法获取</p>
+<p>​      \1. width()</p>
+<p>​            Jq对象.width(数字) 设置对象内容区域的宽</p>
+<p>​            Jq对象.width()   获取对象内容区域的宽度</p>
+<p>Jq对象.innerWidth()    获取对象width(内容)+padding的值</p>
+<p>​            Jq对象.outerWidth() 获取对象width(内容)+padding+border的值</p>
+<p>​      Jq对象.outerWidth(true);</p>
+<p>​      传true:  获取对象width(内容)+padding+border+margin的值</p>
+<p>​      \2. height()</p>
+<p>​            Jq对象.height(数字) 设置对象内容区域的宽</p>
+<p>​            Jq对象. height () 获取对象内容区域的宽度</p>
+<p>​            跟上面一样</p>
+<p>四 获取向上或向左卷曲出去的值</p>
+<p>​      Jq对象.scrollTop();      获取向上卷曲出去的值</p>
+<p>​      Jq对象.scrollTop(数字);  设置向上卷曲出去的高度</p>
+<p>​      Jq对象.scrollLeft();      获取向左卷曲出去的值</p>
+<p>​      在jQuery中,$(window)(jq对象)没有pageYoffset这个属性。</p>
+<p>​      而window(js对象)用pageY(X)offset获取向上或向左卷曲出去的值</p>
+<p>五 offset()和position()方法</p>
+<p>​      Jq对象.offset();   </p>
+<p>获取元素距离document的位置,返回值为对象：{left:100, top:100}     </p>
+<p>就是当前元素距离左边和上边的值</p>
+<p>console.log(offset().top); 获取距离上边的值</p>
+<p>​      Jq对象.position(); </p>
+<p>返回一个对象，获取元素距离最近的已经定位的父元素top和left值</p>
+<p>六．JQuery事件机制</p>
+<p>​      1.简单的注册事件    缺点：一次只能注册一个事件 (给自己注册)</p>
+<p>​            $(“p”).click(function (){</p>
+<p>​                  alert(“呵呵”);</p>
+<p>});</p>
+<p>​      2.bind注册事件，可以同时注册多个事件，也是简单事件（给自己注册）</p>
+<p>​            (1).$(“p”).bind(“click mouseenter”,function (){</p>
+<p>​                  alert(“哈哈”);</p>
+<p>​            })</p>
+<p>​            (2).$(“p”).bind({</p>
+<p>​                  click：function (){</p>
+<p>​                       alert(“呵呵”);</p>
+<p>​                  },</p>
+<p>​                  mouseenter：unction (){</p>
+<p>​                       alert(“哈哈”);</p>
+<p>​                  }</p>
+<p>​            )</p>
+<p>3.委托事件 （给父元素注册委托事件）</p>
+<p>​            参数1：事件最终由子元素谁来执行</p>
+<p>​            参数2: 事件的类型</p>
+<p>​            参数3:事件处理函数</p>
+<p>​      Jq对象.delegate(“需要注册事件的子元素”,”事件类型”,”事件处理函数”)</p>
+<p>好处：动态创建的元素也能够有事件。如果子元素需要大量注册相同事件时,只需要给父元素注册一次就行了。</p>
+<p>原理:给div(父元素)注册了委托事件,但是div不会执行,只给div的所有子元素p执行，(包括后面新增的p)，是因为点击了p，会冒泡给div，然后div会把事件给p执行，相当于是p注册的事件。</p>
+<p>​      例：$(“div”).delegate(“p”,”click”,function (e){</p>
+<p>​                       alert(“呵呵”);</p>
+<p>​                       console.log(this);这里this是你点击了的那个p</p>
+<p>​            })</p>
+<p>​      </p>
+<p>七 on()注册事件 重点  （两种注册方式）就是bind()+detegate()</p>
+<p>​      jQuery1.7后出来的on方法</p>
+<p>​      参数1：事件类性</p>
+<p>​      参数2:  事件由子元素谁来执行(选择器)  (可写可不写)</p>
+<p>​      参数3:  data传递给处理函数的数据（不常使用,可不写）</p>
+<p>​      参数4：事件处理函数</p>
+<p>​      第一种  注册简单事件</p>
+<p>​            Jq对象.on(“事件类型” ,function (){</p>
+<p>​                             Console.log(this): &#x2F;&#x2F;这里的this是点击的那个DOM对象</p>
+<p>​                             alert(“呵呵”);</p>
+<p>​            })</p>
+<p>​      第二种  可以注册委托事件(给父元素注册，让子元素执行)</p>
+<p>​      Jq对象.on(“事件类型”,”需要注册事件的子元素”,function (){</p>
+<p>​                             alert(“呵呵”);</p>
+<p>​      })</p>
+<p>执行顺序:如果父元素有委托事件，又有自己的事件，那么点击子元素，冒泡给父元素时，先执行委托事件，在执行自己的事件</p>
+<p>八．解绑事件</p>
+<p>​      1．unbind()方法  (不用)   能解绑简单和委托事件</p>
+<p>​            Jq对象.unbind(“click”)  解绑指定的事件 </p>
+<p>​            Jq对象.unbind();  解绑所有的事件</p>
+<p>​      2．undelegate()方法   (不用)        只会解绑委托事件</p>
+<p>​            Jq对象. undelegate (“click”)  解绑click委托事件, </p>
+<p>​            Jq对象. undelegate ();  解绑所有的委托事件</p>
+<p>​      \3. off()方法 (常用)       能解绑简单和委托事件</p>
+<p>​            Jq对象. off(“click”)  解绑这个对象所有的click事件 </p>
+<p>​            Jq对象. off ();  解绑这个对象所有的事件</p>
+<p>九．触发事件</p>
+<p>​      Jq对象.click()；  触发click事件</p>
+<p>​      Jq对象.trigger(“click”);(常用)  触发click事件</p>
+<p>​     例：<input type="button" name="btn" id="btn" value="触发" /></p>
+<p>            <p>121</p></p>
+<p>​            &#x2F;&#x2F;给p注册点击事件</p>
+<p>​            $(“p”).on(“click mouseenter”, function() {</p>
+<p>​                       alert(“呵呵”);</p>
+<p>​                  })</p>
+<p>​            &#x2F;&#x2F;给按钮注册点击事件</p>
+<p>​            $(“#btn”).on(“click”, function() {</p>
+<p>​                       &#x2F;&#x2F;触发p元素的点击事件</p>
+<p>​                       &#x2F;&#x2F;$(“p”).click();</p>
+<p>​                       $(“p”).trigger(“click”);</p>
+<p>​                  });</p>
+<p>十．事件参数对象</p>
+<p>​      事件处理函数中默认传进一个事件参数对象</p>
+<p>​      e.data;  用来接受 on方法注册事件时参数3传进来的值</p>
+<p>e.keyCode    获取键盘按下的键的值</p>
+<p>e.clientX:         获取基于浏览器窗口横坐标</p>
+<p>e.clientY:          获取基于浏览器窗口纵坐标</p>
+<p>e.stopPropagation()    阻止事件冒泡</p>
+<p>e.preventDefault();阻止超链接默认事件跳转 jq中没有cancelBubble</p>
+<p>return false  既能阻止事件冒泡，又能阻止a默认跳转,但在js代码中只能阻止a链接跳转</p>
+<p>十一.delay()方法</p>
+<p>​      delay：用来推迟动画队列的执行，也可以用于自定义队列。</p>
+<p>​      例：$(“div”).fadeIn(1000).delay(3000).fadeOut(1000);</p>
+<p>执行完fadeIn后等待3s再执行fadeOut；</p>
+<p>十二.链式编程</p>
+<p>​      设置性操作：可以链式编程,因为总是返回一个jq对象 </p>
+<p>​      获取性操作，不能链式，因为获取性操作,会返回数值,字符串等</p>
+<p>​      总之判断,返回的是不是一个jq对象。</p>
+<p>​      Jq对象.height();  返回的是一个样式值,不能再链式编程</p>
+<p>十三.end()方法</p>
+<p>​      end()：链式编程时,用jq对象.end()会返回这个jq对象的上一个jq对象</p>
+<p>​      例：<ul class="comment"></p>
+<p>​                  <li>☆</li></p>
+<p>​                  <li>☆</li></p>
+<p>​                  <li>☆</li></p>
+<p>​                  <li>☆</li></p>
+<p>​                  <li>☆</li></p>
+<p>​            </ul></p>
+<p>​      $(“.comment li”).on(“mouseenter”,function (){</p>
+<p>​            第一个jQuery对象,里面是鼠标第一次进入的那个li</p>
+<p>​            第二个jQuery对象,里面是鼠标第一次进入的那个li的前面所有的li</p>
+<p>​            console.log($(this).prevAll().end());&#x2F;&#x2F;第一个jQuery对象       </p>
+<p>​            })</p>
+<p>andSelf()：获取当前jq对象和上一次jq对象</p>
+<p>ag：console.log($(‘ul’).find(‘li’).andSelf());返回当前jq对象和上一次jq对象</p>
+<p>十四 each()方法     遍历jq对象  </p>
+<p>​      参数1：是jq对象中每个DOM对象对应的索引</p>
+<p>​      参数2：是jq对象中每个DOM对象</p>
+<p>Jq对象.each（function (index,element){   }）遍历jq对象中的每一个DOM对象</p>
+<p>例：     <ul id="ulList"></p>
+<p>​                  <li>什么都看不见</li></p>
+<p>​                  <li>什么都看不见</li></p>
+<p>​                  <li>什么都看不见</li></p>
+<p>​                  <li>什么都看不见</li></p>
+<p>​                  <li>什么都看不见</li></p>
+<p>​                  <li>什么都看不见</li></p>
+<p>​                  <li>什么都看不见</li></p>
+<p>​                  <li>什么都看不见</li></p>
+<p>​                  <li>什么都看不见</li></p>
+<p>​                  <li>什么都看不见</li></p>
+<p>​      </ul></p>
+<p>$(“#ulList&gt;li”).each(function (index,element){</p>
+<p>​                  &#x2F;&#x2F;element:是jq对象里面的每一个DOM对象</p>
+<p>​                  &#x2F;&#x2F;console.log(element);</p>
+<p>​                  console.log(this); 也是每一个DOM对象</p>
+<p>​                  $(element).css(“opacity”,(index+1)&#x2F;10);  &#x2F;&#x2F;转成jq对象</p>
+<p>​            })</p>
+<p>十五.$的冲突</p>
+<p>​      引入jQuery文件和别的框架文件时，里面都有$命名的函数或对象时,</p>
+<p>如果jQuery拿到控制权，就是引入jQuery的文件在最下面。jQuery就可以放弃$的控制权</p>
+<p>例：<script src="../20-冲突的问题.js"></script></p>
+<p>      <script
+src="../jquery-1.12.4.js"></script>         jQuery文件</p>
+<p>var c&#x3D;$.noConflict();   jQuery释放$的控制权,并且把$的能力给了c</p>
+<div></div>
+
+<p>console.log(c(“div”));        用这种方式</p>
+<p>$.noConflict();也可以就释放$的控制权; </p>
+<p>console.log(jQuery(“div”));  用这种方式  </p>
+<p>console.log(jQuery&#x3D;&#x3D;$); &#x2F;&#x2F;true</p>
+<p>第四天</p>
+<p>一．插件</p>
+<p>(1).jquery不可能包含所有的功能，我们可以通过插件扩展jquery的功能，</p>
+<p>​       就是不同的功能封装在不同的js文件中。</p>
+<p>例:jquery自定义动画animate不支持颜色的渐变,就需要引入jquery.color.js这个插件，引入之后就支持。</p>
+<p>  (2). 所有的插件要在引入jquery文件之后再引入</p>
+<p>​      例：<script src="jquery-1.12.4.js"></script></p>
+<p>            <script
+src="插件/jquery.color.js"></script></p>
+<p>​            这里颜色最好用16进制，因为有的颜色不支持</p>
+<p>​            Jq对象.animate({“backgroundColor”:”#fff”},3000}); 颜色渐变</p>
+<p>二 懒加载</p>
+<p>​      对于图片很多的网站,可以先不加载图片，等到用户看到时，再加载图片</p>
+<p>​      这样可以让页面更快加载出来</p>
+<p>​      步骤一：引入jquery.lazyload.js插件</p>
+<p>                  <script
+src="jquery-1.12.4.js"></script></p>
+<p>                  <script
+src="插件/jquery.lazyload.js"></script></p>
+<p>​      步骤二：把img标签的src改成data-original</p>
+<p>                  <img class="lazy" data-original="../img/02.gif"/></p>
+<p>​      步骤三：调用方法</p>
+<p>​                  $(“.lazy”).lazyload();  插件中的方法</p>
+<p>三．jqueryUI插件</p>
+<p>​      &#x2F;&#x2F;1.这个插件要引入css和js两个文件</p>
+<p>四．制作插件</p>
+<p>(1).插件的原理：jquery插件其实说白了就是给jquery对象增加一些新的方法，让jquery对象拥有某一个功能。(在jQuery原型中添加方法就可以制作)</p>
+<p>(2)$.fn等于jQuery.prototype。在原型中添加方法,每个jq对象都可以调用</p>
+<p>​            jQuery.prototype.AsayHi &#x3D; function () {</p>
+<p>​            console.log(“我在原型中的方法”);</p>
+<p>}</p>
+<p>(3).每个Jq对象中的__proto__原型对象都是指向$(也是jQuery)函数中prototype原型对象</p>
+<p>​      </p>
+<p>​                                                          补充</p>
+<p>一．     表单序列化</p>
+<p>\1.    Jq对象.serialize()  序列化成字符串</p>
+<p><img src="file:///C:/Users/Jin/AppData/Local/Temp/msohtmlclip1/01/clip_image002.jpg" alt="img"></p>
+<p>​       <img src="file:///C:/Users/Jin/AppData/Local/Temp/msohtmlclip1/01/clip_image004.jpg" alt="img"></p>
+<p>\2. jq对象.serializeArray()  序列化成数组.</p>
+<p><img src="file:///C:/Users/Jin/AppData/Local/Temp/msohtmlclip1/01/clip_image006.jpg" alt="img"></p>
 
                 
             </div>
@@ -504,7 +1061,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://jinz99.github.io/2023/04/21/%E7%A7%BB%E5%8A%A8%E7%AB%AF/">https://jinz99.github.io/2023/04/21/%E7%A7%BB%E5%8A%A8%E7%AB%AF/</a>
+                    <a href="https://jinz99.github.io/2023/05/21/jQuery/">https://jinz99.github.io/2023/05/21/jQuery/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -709,9 +1266,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2023/05/21/jQuery/">
                     <div class="card-image">
@@ -729,9 +1287,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2023-05-21
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-05-21
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -740,6 +1298,7 @@
                         </span>
                     </div>
                 </div>
+
                 
             </div>
         </div>
@@ -750,13 +1309,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2023/04/09/Git/">
+                <a href="/2023/04/21/%E7%A7%BB%E5%8A%A8%E7%AB%AF/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="Git">
+                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="移动端">
                         
-                        <span class="card-title">Git</span>
+                        <span class="card-title">移动端</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -767,7 +1326,7 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-04-09
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-04-21
                             </span>
                         <span class="publish-author">
                             
